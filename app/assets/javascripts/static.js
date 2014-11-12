@@ -20,7 +20,6 @@ angular.module('leatherLaneMarketApp', ['ngAnimate'])
     $scope.addStall = function() {
       $http.post('/stalls.json', { stall: $scope.newStall }).success(function(data) {
         $scope.stalls.push(data);
-        $scope.selectedStall = $scope.newStall;
         $scope.newStall = null;
         $scope.stallForm.$setPristine();
       });
